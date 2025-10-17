@@ -1,8 +1,20 @@
 [server]
-headless = true
-port = 8501
-enableCORS = false
-enableXsrfProtection = false
+enableCORS= true
+enableXsrfProtection = true
+enableWebsocketCompression = true
+#If you embed the app in another site, add that site below too.
+corsAllowedOrigins = ["https://gcc-platform2.onrender.com"]
+[browser]
+#Tell Streamlit what the public URL is (used for CORS/XSRF checks)
+serverAddress = "gcc-platform2.onrender.com"
+serverPort 443
 
-[theme]
-base = "light"
+
+#[server]
+#headless = true
+#port = 8501
+#enableCORS = false
+#enableXsrfProtection = false
+
+#[theme]
+#base = "light"
